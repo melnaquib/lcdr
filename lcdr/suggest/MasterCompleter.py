@@ -35,6 +35,7 @@ def get_completer_from_prefix(prefix):
     completer = DummyCompleter()
     return completer
 
+@lru_cache()
 def make_avail_cmd_completer():
     completer = ExecutableCompleter()
     return completer
@@ -43,7 +44,7 @@ avail_cmd_completer = make_avail_cmd_completer()
 
 def get_completer(document: Document, complete_event: CompleteEvent):
     #data cmds man help conda_install
-    line = document.current_line_before_cursor
+    line = document.current_line_before_cursor.lstrip()
     if ' ' not in line:
         return avail_cmd_completer
     cmd = line.split(" ")[0]
