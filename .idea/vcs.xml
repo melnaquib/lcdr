@@ -2,6 +2,19 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/ptpython" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/ptterm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/pymux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/pypager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/python-prompt-toolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/pyvim" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sandbox/xonsh" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/ptpython" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/ptterm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/pymux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/pypager" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/scratch/python-prompt-toolkit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/pyvim" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/scratch/xonsh" vcs="Git" />
   </component>
 </project>

@@ -5,9 +5,9 @@ from prompt_toolkit.completion import Completer, Completion
 
 class HelpCompleter(Completer):
 
-    def __init__(self, cmd: str, doc: str):
+    def __init__(self, cmd: str, doc: bytes):
         self.cmd = cmd
-        self.doc = doc
+        self.doc = doc.decode()
         self.switches = []
         self.build()
 

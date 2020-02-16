@@ -14,20 +14,23 @@ pathCompleter = PathCompleter()
 
 @lru_cache()
 def get_completer_from_prefix(prefix):
-    # try:
-    #     doc = subprocess.check_output(["man", prefix]).decode()
-    #     completer = ManCompleter(prefix, doc)
-    #     return completer
-    # except Exception as ex::
-    #     pass
     try:
-        doc = subprocess.check_output([prefix, "--help"]).decode()
+        # doc = subprocess.check_output(["man", prefix])
+        doc = subprocess.check_output(["man", prefix])
+        # , "|", "groff", "-mandoc", "-Thtml"], shell=True)
+        completer = ManCompleter(prefix, doc)
+        # completer = HelpCompleter(prefix, doc)
+        return completer
+    except Exception as ex:
+        pass
+    try:
+        doc = subprocess.check_output([prefix, "--help"])
         completer = HelpCompleter(prefix, doc)
         return completer
     except Exception as ex:
         pass
     try:
-        doc = subprocess.check_output([prefix, "-h"]).decode()
+        doc = subprocess.check_output([prefix, "-h"])
         completer = HelpCompleter(prefix, doc)
         return completer
     except Exception as ex:

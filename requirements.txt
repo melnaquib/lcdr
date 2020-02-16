@@ -1,2 +1,6 @@
 prompt_toolkit
+ptterm
+pymux
 pythondialog
+beautifulsoup4
+urwid

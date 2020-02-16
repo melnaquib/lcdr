@@ -12,6 +12,11 @@ setuptools.setup(
     long_description=long_description,
     url="https://github.com/melnaquib/ltcmdr",
     packages=setuptools.find_packages(),
+    entry_points={
+          'console_scripts': [
+              'lcdr = lcdr.__main__:main'
+          ]
+      },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: AGPLv3 License",
